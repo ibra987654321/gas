@@ -49,7 +49,7 @@
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
                             <li class="active"><a href="#home">Главная</a></li>
-                            <li><a href="#service">Продукция</a></li>
+                            <li><a href="goal.html">Наша цель</a></li>
                             <li><a href="#about">О компании</a></li>
                             <li><a href="#price">Цены</a></li>
                             <li><a href="contact.html">Контакт</a></li>
@@ -420,42 +420,26 @@
                                         <h2>Калькулятор</h2>
                                     </div>
                                     <div class="modal-body ">
-                                        <h3>Расчет стоимости бензина</h3>
-                                            <select id="cvet">
-                                                <option value="92">АИ-92</option>
-                                                <option value="95">АИ-95</option>
-                                                <option value="98">АИ-98</option>
-                                            </select>
-                                            <input type="text" id="shirina" value="" placeholder="укажите кол-во литров">
-                                            <button   onclick="raschitat();" class="button button-sp">Рассчитать стоимость</button>
-                                            <div id="ploschad" class="style price"></div>
-                                            <div id="stoimost" class="style price"></div>
-                                            <script>
-                                            function raschitat() {
-                                                cvet  = document.getElementById('cvet').value;
-                                                    switch (cvet) {
-                                                    case "92":
-                                                             cena = 37,9;
-                                                        break
-                                                    case "95":
-                                                            cena = 37,9;
-                                                        break   
-                                                        case "98":
-                                                            cena = 46,1;
-                                                        break   
-                                                    }
-                                                shirina  = document.getElementById('shirina').value;
-                                                    if(shirina == ""){
-                                                alert("Вы не указали колөво литров");
-                                                } 
-                                                    else {
-                                                        ploschad = parseFloat (shirina);
-                                                        document.getElementById('ploschad').innerHTML = "Обьем равен: "+ ploschad +" л.";
-                                                        stoimost = ploschad*cena;
-                                                        document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ stoimost +" с.";
-                                                        }
-                                                }
-                                            </script>
+                                        <form>
+                                            <span>Укажите количество литров</span>
+                                            <span><br>
+                                              <input type="number" placeholder="Укажите кол-во литров" id="billAmount2">
+                                            </span><br>
+                                            <span>Укажите вид </span>
+                                            <p>
+                                              <select id="tipPercent2">
+                                                <option selected disabled value="32.90">AИ-92</option>
+                                                <option value="36.20">AИ-95</option>      
+                                                <option value="39.90">AИ-98</option>
+                                              </select>
+                                            </p>
+                                          </form>
+                                          <button type="button" id="calculate2" class="button button-sp">Рассчитать </button>
+                                          <br>
+                                          <br>
+                                              <div>
+                                              <span id="tip2">0.00</span> <span>сом</span>
+                                              </div>
                                 </div>
                         </div>
                     </div>
@@ -507,28 +491,39 @@
                     </div>
                 </div>
                 <div class="centered">
-                    <button id="myBtn1" class="button">Расчитать</button>
-                        <div id="myModal1" class="modal">
-                            <div class="modal-content">
-                                    <div class="modal-header">
-                                        <span class="close">&times;</span>
-                                        <h2>Калькулятор</h2>
+                    <button id="myBtn2" class="button">Расчитать</button>
+                        <div id="myModal2" class="modal2">
+                            <div class="modal-content2">
+                                    <div class="modal-header2">
+                                        <span class="close2">&times;</span>
+                                        <h1>Калькулятор стоимости газа:</h1>
                                     </div>
-                                    <div class="modal-body ">
-                                        <h3>Расчет стоимости газ</h3>
-                                            <select id="gas">
-                                                <option value="bish">Бишкек</option>
-                                                <option value="chui">Чуйская область</option>
-                                                <option value="cholpon">Чолпон-Ата</option>
-                                                <option value="bokonbaev">Боконбаева</option>
-                                                <option value="naryn">Нарын</option>
-                                                <option value="at-bashy">Ат-Башы</option>
-                                            </select>
-                                            <input type="text" id="shirina1" value="" placeholder="укажите кол-во литров">
-                                            <button   onclick="raschitat1();" class="button button-sp">Рассчитать стоимость</button>
-                                            <div id="ploschad1" class="style price"></div>
-                                            <div id="stoimost1" class="style price"></div>
-                                           
+                                    <div class="modal-body2 ">
+                                        <form>
+                                            <span>Укажите количество литров</span>
+                                            <span><br>
+                                              <input type="number" placeholder="Укажите кол-во литров" id="billAmount">
+                                            </span><br>
+                                            <span>Укажите Ваш регион</span>
+                                            <p>
+                                              <select id="tipPercent">
+                                                <option selected disabled value="0">Укажите регион</option>
+                                                <option value="15.00">Бишкек</option>      
+                                                <option value="15.50">Чуйская область</option>
+                                                <option value="17.00">Нарын</option>
+                                                <option value="17.50">Ат-Башы</option>
+                                                <option value="18.50">Боконбаево</option>
+                                                <option value="18.00">Чолпон-Ата</option>
+                                              </select>
+                                            </p>
+                                          </form>
+                                          <button type="button" id="calculate" class="button button-sp">Рассчитать </button>
+                                            <br>
+                                            <br>
+                                                <div>
+                                                <span id="tip">0.00</span> <span>сом</span>
+                                                </div>
+                                            
                                 </div>
                         </div>
                     </div>
@@ -537,55 +532,19 @@
         </div>
         <!-- Price section end -->
         <!-- Client section start -->
-        <div class="section third-section">
+        <div class="section four-section">
             <div class="container centered">
                 <div class="sub-section">
-                    <div class="title clearfix">
-                        <div class="pull-left">
-                            <h3>Наши поставщики</h3>
+                    <div class="behind__section ">
+                        <div class="title ">
+                            <h3 class="clearfix">СФЕРА ДЕЯТЕЛЬНОСТИ</h3>
                         </div>
-                        <ul class="client-nav pull-right">
-                            <li id="client-prev"></li>
-                            <li id="client-next"></li>
-                        </ul>
-                    </div>
-                    <ul class="row client-slider" id="clint-slider">
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo01.png" alt="client logo 1">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 2">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo03.png" alt="client logo 3">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 4">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo05.png" alt="client logo 5">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo02.png" alt="client logo 6">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/clients/ClientLogo04.png" alt="client logo 7">
-                            </a>
-                        </li>
-                    </ul>
+                        <span class="clearfix">Поставка, хранения, транспортировка, оптовая и розничная реализация Сжиженного
+                            нефтяного газа и светлых нефтепродуктов. Поставка оборудований и комплектующих деталей для
+                            АГЗС (авто газозаправочная станция), АЗС (авто заправочная станция), ГНС (газонаполнительная
+                            станция) и Нефтебаз, техобслуживание, сервисные работы и строительство соответствующих
+                            объектов. Так же поставка, установка и тех обслуживание цистерн малого и большого объема для
+                            автономной газификации жилых и коммерческих объектов</span>
                 </div>
             </div>
         </div> 

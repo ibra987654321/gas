@@ -383,9 +383,10 @@ p {
 }
 /* Third section use bacground image */
 .third-section {
+    z-index: 1;
     height: 500px;
     padding-bottom: 70px;
-    background: url(../images/brand-bg.png) no-repeat center;
+    background: url(../images/brand-bg.jpg) no-repeat center;
 }
 .third-section .container {
     padding-top:20px;
@@ -394,6 +395,12 @@ p {
 .third-section .title {
     border-bottom: 1px solid #A1AAB7;
     color: #fff;
+}
+.four-section {
+    z-index: 1;
+    height: 500px;
+    padding-bottom: 70px;
+    background: url(../images/four-section.jpg) no-repeat center;
 }
 .sub-section {
     margin-top:30px;
@@ -926,8 +933,10 @@ p {
     background-color: #fff;
     margin: auto;
     padding: 0;
+    color: #000;
     border: 1px solid #000;
     width: 50%;
+    height: 51%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -966,18 +975,11 @@ p {
 }
 
 .modal-body {padding: 2px 16px;}
-#ploschad{
+#tip{
     color: #000;
     padding: 15px;
     margin-top: 10px ;
     margin-bottom: 10px;
-    border: 1px  solid black;
-}
-#stoimost{
-    color: #000;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px #000 solid;
 }
 .d_flex{
     display: flex;
@@ -1002,16 +1004,32 @@ p {
     height: 300px;
     line-height: 1.5;
 }
+.wrapper{
+    background-color: #F4F8F9;
+}
 .wrapper__container{
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+}
+.wrapper__block1{
+    display: flex;
+    background-color: #ffff;
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253); 
 }
 .wrapper__block{
     display: flex;
+    background-color: #ffff;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top:  50px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253); 
 }
 .block__img{
     border-radius: 10px;
     margin: 50px;
-    margin-bottom: 0;
     width: 100%;
     justify-content: center;
    
@@ -1026,4 +1044,94 @@ p {
     color: #000;
     width: 100%;
     line-height: 1.5;
+}
+.behind__section{
+    background-color: #A1AAB7;
+    opacity: 0.3;
+}
+.clearfix  {
+    color: #007ACC;
+    line-height: 1.5;
+}   
+.modal2 {
+    display: none; 
+    position: fixed;
+    padding-top: 10%; 
+    padding-left: 20%;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content2 {
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+    color: #000;
+    border: 1px solid #000;
+    left: 6%;
+    width: 50%;
+    height: 51%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close2 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header2 {
+    padding: 2px 16px;
+    background-color:#007ACC;
+    color: white;
+}
+
+.modal-body2 {padding: 2px 16px;}
+#tip2{
+    color: #000;
+    padding: 15px;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+}
+.d_flex{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 90px;
+}
+@media (min-width: 420px) and (max-width: 979px){
+    .d_flex{
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
