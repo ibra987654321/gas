@@ -485,6 +485,8 @@
   }
   .span12 {
     width: 724px;
+    border-radius: 4px;
+    margin: 70px;
   }
   .span11 {
     width: 662px;

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<!--
- * A Design by GraphBerry
- * Author: GraphBerry
- * Author URL: http://graphberry.com
- * License: http://graphberry.com/pages/license
--->
+<!DOCTYPE >
+
 <html lang="en">
     
     <head>
@@ -92,33 +87,52 @@
                                 <div id="successSend" class="alert alert-success invisible">
                                     <strong>Отлично</strong>На ваше сообщение ответят в течении часа</div>
                                 <div id="errorSend" class="alert alert-error invisible">Произошло ошибка</div>
-                                <form id="contact-form" action="php/mail.php">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Ваше имя..." />
-                                            <div class="error left-align" id="err-name">Напишите свое имя.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Ваш email..." />
-                                            <div class="error left-align" id="err-email">Напишите свой Емайл.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Сообщение..."></textarea>
-                                            <div class="error left-align" id="err-comment">Напишите свое сообщение.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button id="send-mail" class="message-btn">Отправить</button>
-                                        </div>
-                                    </div>
+                                <form method="GET" action="mailto:tenizbaevulukbek@gmail.com" enctype="text/plain" id="contact-form">
+                                    <br>
+                                    <input class="span12" type="text" name="subject" placeholder="* Тема..." />
+                                <br>
+                                    <input class="span12" type="text" name="Name" placeholder="* Ваше имя..." />
+                                <br>
+                                    <input class="span12" type="text" name="E-Mail Address" placeholder="* E-mail..."/>
+                                <br>
+                                    <textarea class="span12"  type="text" name="Message" placeholder="* Сообщение..."></textarea>
+                                
+                                    <br/>
+                                    <input type="submit" value="Send" class="message-btn"/>
+                                
+                                    <input type="hidden" name="body" />
                                 </form>
                             </div>
                         </div>
+                        <script>
+                            var form = document.getElementsByTagName('form')[0];
+                            form.addEventListener('submit',contact,false);
+                            function contact(e) {
+                               // Prevent Default Form Submission
+                               e.preventDefault();
+                         
+                               var target = e.target || e.srcElement;
+                               var i = 0;
+                               var message = '';
+                         
+                               // Loop Through All Input Fields
+                               for(i = 0; i < target.length; ++i) {
+                                  // Check to make sure it's a value. Don't need to include Buttons
+                                  if(target[i].type != 'text' && target[i].type != 'textarea') {
+                                         // Skip to next input since this one doesn't match our rules
+                                     continue;
+                                  }
+                         
+                                  // Add Input Name and value followed by a line break
+                                  message += target[i].name + ': ' + target[i].value + "\r\n";
+                               }
+                               // Modify the hidden body input field that is required for the mailto: scheme
+                               target.elements["body"].value = message;
+                         
+                               // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
+                               this.submit();
+                            }
+                         </script>
                     <!-- </div> -->
                 </div>
                 <div id="contact" class="contact">

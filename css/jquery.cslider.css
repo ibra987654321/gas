@@ -42,6 +42,7 @@
     top: 0px;
     left: 0px;
     text-align: left;
+    color: #fff;
 }
 .da-slide-current {
     z-index: 900;
@@ -76,16 +77,18 @@
 
 .da-slide h2,
 .da-slide h4{
-    color: #181A1C;
+    color: #ffff;
     text-transform:uppercase;
       white-space: nowrap;
     z-index: 10;
+    align-items: center;
 }
 .da-slide h2 {
     font-size: 33px;
     width: 50%;
     top: 120px;
     font-weight:bold;
+    color:white ;
 }
 
 .da-slide h4{
@@ -150,7 +153,12 @@
     width: 45px;
     cursor: pointer;
     z-index: 900;
-    opacity: 0;
+}
+@media (min-width:320px) and (max-width: 979px){
+    .da-arrows span {
+        height: 50%;
+        margin-top: 40px;
+    }
 }
 .da-slider:hover .da-arrows span {
     opacity: 1;
