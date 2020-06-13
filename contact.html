@@ -55,6 +55,7 @@
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
                             <li class="active"><a href="index.html">Главная</a></li>
+                            <li><a href="goal.html">Наша цель</a></li>
                             <li><a href="Company.html">О компании</a></li>
                             <li><a href="#contact">Контакт</a></li>
                         </ul>
@@ -68,32 +69,20 @@
         <div class="section secondary-section">
             <div class="container">
                 <div class="title">
-                    <h1>Звязаться с нами </h1>
+                    <h1>Связаться с нами </h1>
                     <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
                 </div>
             </div>
                 <!--The div element for the map -->
-                <div id="map"></div>
-                <script>
-                    // Initialize and add the map
-                    function initMap() {
-                    // The location of Uluru
-                    var uluru = {lat: 42.8769795, lng: 74.5218206};
-                    // The map, centered at Uluru
-                    var map = new google.maps.Map(
-                        document.getElementById('map'), {zoom: 12, center: uluru});
-                    // The marker, positioned at Uluru
-                    var marker = new google.maps.Marker({position: uluru, map: map});
-                    }
-            </script>
+                <div class="map-contact">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac31e61a3c3241c2a6c67001d20decbdcb73b68dc012c591430822fc83635c236&amp;source=constructor"  frameborder="0" justify-content="center"></iframe>
+                </div>
+              
             <!--Load the API from the specified URL
             * The async attribute allows the browser to render the page while the API loads
             * The key parameter will contain your own API key (which is not needed for this tutorial)
             * The callback parameter executes the initMap() function
             -->
-            <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEu4bGMtngribzx4DnNnhL6Ey_h-9lrRU&callback=initMap">
-            </script>
             <div class="d_flex d-flex flex-column">
                 <div class="map-wrapper">
                     <!-- <div class="container"> -->
