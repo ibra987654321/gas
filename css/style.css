@@ -109,7 +109,7 @@ p {
     border: 1px solid #181A1C;
 }
 .nav-pills > li > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
-    background: #181A1C;
+    background: #007ACC;
     color: #fff;
 }
 .navbar .btn-navbar:hover, .navbar .btn-navbar {
@@ -248,7 +248,7 @@ p {
     border-radius:0;
     box-shadow:none;
     text-align:center;
-    background: #191a1c;
+    background: #007ACC;
 }
 .thumbnail .more {
     display:block;
@@ -283,7 +283,7 @@ p {
     z-index:4;
 }
 .thumbnail h3 {
-    color: #FECE1A;
+    color: #ffff;
     margin-top:10px;
     font-size:20px;
 }
@@ -378,10 +378,10 @@ p {
     padding: 0;
 }
 .secondary-section .title {
-    border-bottom: 1px solid #ffff;
+    border-bottom: 1px solid #007ACC;
 }
 .secondary-section h1, .secondary-section .title p {
-    color: #fff;
+    color: #007ACC;
 }
 /* Third section use bacground image */
 .third-section {
@@ -433,7 +433,7 @@ p {
 ***************************************/
  .single-project {
     margin-bottom:30px;
-    background:#181A1C;
+    background:#007ACC;
 }
 .single-project img {
     width:100%;
@@ -447,7 +447,7 @@ p {
 .project-title {
     margin-top:15px;
     margin-bottom:15px;
-    border-bottom:1px solid #FECE1A;
+    border-bottom:1px solid #ffff;
 }
 .project-title h3 {
     float:left;
@@ -456,11 +456,11 @@ p {
     width:80%;
 }
 .project-title .close {
-    color: #FECE1A;
+    color: #ffff;
     margin-top:10px;
 }
 .project-info span, .project-title h3 {
-    color:#FECE1A;
+    color:#ffff;
 }
 .project-info {
     font-weight:100;
@@ -702,6 +702,9 @@ p {
 .contact h1, .contact h2, .contact h3, .contact h4, .contact h5, .contact h6, .contact .section .title > p, .contact .social > li > a {
     color: #fff;
 }
+.color{
+    color:#000;
+}
 .contact textarea, .contact input[type="text"], .contact input[type="email"] {
     padding: 10px;
     line-height: 20px;
@@ -724,6 +727,7 @@ p {
 .contact-info {
     margin-top:10px;
     margin-bottom:10px;
+    color: #000;
 }
 .contact-info p{
      font-weight:normal;
